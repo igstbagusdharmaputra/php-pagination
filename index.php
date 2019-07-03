@@ -101,6 +101,15 @@
                     }
                 }
             }
+            else if ( $total_no_page <= 10 ){
+                for ($i = 1 ; $i <=$total_no_page;$i++){
+                    if($i == $page){
+                        echo "<li class='active'><a>$i</a></li>";
+                    }else{
+                        echo "<li><a href='?page=$i'>$i</a><li>";
+                    }
+                }
+            }
            
         ?>
         <li <?php if($page >= $total_no_page) { echo "class='disabled'"; } ?>>
